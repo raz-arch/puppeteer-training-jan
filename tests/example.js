@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer')
 const chai = require('chai').expect
+const generateId = require('../lib/utils').generateID
 describe('my first puppeteer test', async () => {
 	let browser
 	let page
@@ -21,8 +22,10 @@ describe('my first puppeteer test', async () => {
     })
 
     it('My first step',async () => {
-        await page.goto('https://dev.to')
-        await page.waitForSelector('#nav-search')
+        //await page.goto('https://dev.to')
+        //await page.waitForSelector('#nav-search')
+        let id = generateId(10)
+        console.log(id)
     });
 
 })
