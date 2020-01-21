@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout=30000 ./tests",
-    "test:snapshot":"jest --config=jest.config.js --detectOpenHandles --forceExit",
+    "test:snapshot": "jest --config=jest.config.js --detectOpenHandles --forceExit",
     "test:snapshot:update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit"
   },
   "author": "Rahul Raj",
