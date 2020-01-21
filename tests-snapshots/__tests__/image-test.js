@@ -3,21 +3,21 @@ const { toMatchImageSnapshot } = require('jest-image-snapshot')
 
 expect.extend({ toMatchImageSnapshot })
 
-describe('my first snapshot test', async () => {
+describe('my first snapshot test', () => {
 	let browser
 	let page
-	beforeAll(async()=>{
+	beforeAll(async function(){
         browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
 
         })
         page = await browser.newPage()
     })
-    afterAll(async()=>{
+    afterAll(async function(){
         await browser.close()
     })
     test('homepage snapshot', async() => {
-        await page.goto('http://google.com')
+        await page.goto('http://example.com')
         const image =  await page.screenshot()
         expect(image).toMatchImageSnapshot()
     },30000)
