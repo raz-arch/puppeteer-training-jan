@@ -4,12 +4,16 @@
   "description": "automation testing with puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout=30000 ./tests"
+    "test": "mocha --timeout=30000 ./tests",
+    "test:snapshot":"jest --config=jest.config.js --detectOpenHandles --forceExit",
+    "test:snapshot:update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit"
   },
   "author": "Rahul Raj",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
+    "jest": "^24.9.0",
+    "jest-image-snapshot": "^2.12.0",
     "mocha": "^6.2.2",
     "puppeteer": "^2.0.0"
   }
