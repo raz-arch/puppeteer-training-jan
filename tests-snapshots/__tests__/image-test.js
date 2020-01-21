@@ -21,4 +21,11 @@ describe('my first snapshot test', () => {
         const image =  await page.screenshot()
         expect(image).toMatchImageSnapshot()
     },30000)
+
+    test('single element snapshot', async() => {
+        await page.goto('http://example.com')
+        const h1 = await page.waitForSelector('h1');
+        const image =  await h1.screenshot()
+        expect(image).toMatchImageSnapshot()
+    })
 })
