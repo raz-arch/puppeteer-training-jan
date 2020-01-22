@@ -8,7 +8,7 @@ describe('my first snapshot test', () => {
 	let page
 	beforeAll(async function(){
         browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
 
         })
         page = await browser.newPage()
