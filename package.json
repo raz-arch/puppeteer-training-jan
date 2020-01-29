@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout=30000 ./tests",
+    "test:report":"mocha -R good-mocha-html-reporter -p reports/myTestReport.html -m Compact --timeout=30000 ./tests",
     "test:snapshot": "jest --config=jest.config.js --detectOpenHandles --forceExit",
     "test:snapshot:update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
+    "good-mocha-html-reporter": "^2.0.1",
     "jest": "^24.9.0",
     "jest-image-snapshot": "^2.12.0",
     "mocha": "^6.2.2",
